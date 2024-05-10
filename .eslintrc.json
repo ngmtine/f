@@ -1,0 +1,26 @@
+{
+    "root": true,
+    // "env": { "browser": true, "es2020": true },
+    "extends": [
+        "plugin:import/recommended", // eslint-plugin-import
+        "plugin:import/typescript" // eslint-plugin-import
+    ],
+    "ignorePatterns": ["dist", "build.mjs"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["import"],
+    "rules": {
+        "import/newline-after-import": ["error", { "count": 1 }], // ファイル冒頭import文の塊の後に1行必須
+        "import/order": [
+            "error",
+            {
+                "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
+                "newlines-between": "always",
+                "pathGroupsExcludedImportTypes": ["builtin"],
+                "alphabetize": {
+                    "order": "asc",
+                    "caseInsensitive": true
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "name": "f",
+    "version": "0.1.0",
+    "description": "(^_^)v",
+    "main": "index.js",
+    "scripts": {
+        "test": "ts-node --transpile-only test/testrunner.ts",
+        "format": "biome lint --write src && biome format --write src",
+        "build": "rm -rf ./dist && node build.mjs"
+    },
+    "author": "ngmtine",
+    "license": "ISC",
+    "devDependencies": {
+        "@biomejs/biome": "1.8.0",
+        "@typescript-eslint/parser": "^7.16.1",
+        "esbuild": "^0.21.5",
+        "eslint": "^8.57.0",
+        "eslint-plugin-import": "^2.29.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    }
+}
